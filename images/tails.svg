@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <radialGradient id="g2" cx="70%" cy="30%" r="80%">
+      <stop offset="0%" stop-color="#fff8ec"/>
+      <stop offset="50%" stop-color="#ffd07a"/>
+      <stop offset="100%" stop-color="#a86a00"/>
+    </radialGradient>
+  </defs>
+  <rect width="100%" height="100%" rx="512" ry="512" fill="transparent"/>
+  <circle cx="512" cy="512" r="460" fill="#fff" stroke="#ef4444" stroke-width="48"/>
+  <circle cx="512" cy="512" r="400" fill="#fff5f5"/>
+  <g transform="translate(0,0)" fill="#4b0303">
+    <text x="512" y="560" font-family="Inter,Arial" font-size="120" text-anchor="middle" fill="#4b0303" font-weight="800">TAILS</text>
+  </g>
+</svg>
