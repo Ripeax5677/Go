@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Crash Gamble</title>
+  <link rel="stylesheet" href="/crash.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Crash Gamble</h1>
+    <div class="top">
+      <div>Bank: <span id="bank">-</span></div>
+      <div>Round: <span id="roundId">-</span></div>
+    </div>
+
+    <div class="main">
+      <div class="multiplier" id="multiplier">1.00x</div>
+      <div class="controls">
+        <input id="betAmount" placeholder="Bet amount" value="100" />
+        <button id="placeBet">Place Bet</button>
+        <button id="cashout" disabled>Cash Out</button>
+        <button id="verifyFair" disabled>Verify Fairness</button>
+      </div>
+      <div class="info">
+        <div>Possible win: <span id="possible">0</span></div>
+        <div id="status">Status: waiting</div>
+      </div>
+      <div class="history">
+        <h3>Last Rounds</h3>
+        <ul id="historyList"></ul>
+      </div>
+    </div>
+  </div>
+  <script src="/crash_client.js"></script>
+</body>
+</html>
