@@ -1,0 +1,16 @@
+{
+  "name": "coinflip-site",
+  "version": "1.0.0",
+  "description": "Simple coin flip website with server-side logging and admin UI",
+  "main": "server.js",
+  "scripts": {
+    "start": "node run.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.4",
+    "express": "^4.22.1",
+    "sqlite3": "^5.1.7",
+    "ws": "^8.18.3"
+  }
+}

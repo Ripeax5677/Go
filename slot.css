@@ -1,0 +1,8 @@
+/* Minimal styling for Emoji Donut Slot */
+.slotContainer{max-width:900px;padding:12px;border:1px solid #ddd;background:#fff;border-radius:8px}
+.slotGrid{display:grid;grid-template-columns:repeat(5,1fr);grid-auto-rows:80px;gap:6px;margin:12px 0}
+.slotGrid .cell{display:flex;align-items:center;justify-content:center;font-size:32px;background:#f7f7f7;border-radius:6px;border:1px solid #eee}
+.slotControls{display:flex;gap:8px;align-items:center;margin-bottom:8px}
+.slotTop{font-weight:600;margin-bottom:8px}
+.slotResult{margin-top:8px;padding:8px;background:#fafafa;border:1px dashed #eee;border-radius:6px}
+.hidden{display:none}

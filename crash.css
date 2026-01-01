@@ -1,0 +1,24 @@
+/* Crash styles integrated into main site */
+.crashContainer{background:#071827;padding:16px;border-radius:8px;color:#dff3ff}
+.topRow{display:flex;justify-content:space-between;margin-bottom:8px;color:#9fb0c6}
+.multDisplay{font-size:42px;text-align:center;padding:12px;border-radius:6px;background:linear-gradient(90deg,#05202b,#0b3140);margin-bottom:12px}
+.crashControls{display:flex;gap:8px;justify-content:center;margin-bottom:8px}
+.crashControls input{width:110px;padding:8px;border-radius:6px;border:none}
+.crashControls button{padding:8px 12px;border-radius:6px;border:none;background:#1f6feb;color:#fff}
+.crashControls button:disabled{opacity:.5}
+.crashInfo{color:#9fb0c6;text-align:center;margin-bottom:8px}
+.crashHistory ul{list-style:none;padding:0;margin:0}
+.crashHistory li{padding:6px 4px;border-bottom:1px solid rgba(255,255,255,0.03);font-size:13px}
+
+.crashStatus{margin-top:10px;text-align:center}
+#crashTimer{color:#9fb0c6}
+/* Modal */
+.crashModal.hidden{display:none}
+.crashModal{position:fixed;left:0;top:0;right:0;bottom:0;background:rgba(0,0,0,0.6);display:flex;align-items:center;justify-content:center;z-index:9999}
+.crashModalBox{background:#0b1b22;color:#e6f7ff;padding:16px;border-radius:8px;max-width:720px;width:90%}
+.modalClose{float:right;border:none;background:transparent;color:#c7e9ff;font-size:18px}
+.crashRunWrap{height:8px;background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.02));border-radius:6px;margin:6px 0;overflow:hidden}
+.crashRunBar{height:100%;width:0%;background:linear-gradient(90deg,#ffd54d,#ff6b6b);transition:width 0.08s linear;box-shadow:0 0 14px rgba(255,107,107,0.08), inset 0 -6px 18px rgba(0,0,0,0.12)}
+.crashProgressWrap{height:10px;background:rgba(255,255,255,0.04);border-radius:6px;margin:8px 0;overflow:hidden}
+.crashProgress{height:100%;width:2%;background:linear-gradient(90deg,#39ff14,#00d4ff);transition:width 0.12s linear}
+ 

@@ -1,0 +1,429 @@
+{
+  "bank": 999632,
+  "history": [
+    {
+      "id": "ebc287f7382186ca",
+      "crashMultiplier": 1.12,
+      "serverSeed": "df9579ab5431ad067bbe19588d1b57ab",
+      "seedHash": "a30ce6a5d16ac90d38560f6587eba1f09e29556268b8faec2214394e325f92b9",
+      "bets": {},
+      "timestamp": 1767252360768
+    },
+    {
+      "id": "43224d860c4a039f",
+      "crashMultiplier": 1.14,
+      "serverSeed": "2a09b375730bd1ec34afd3244c240f56",
+      "seedHash": "93fe55d791adab1794108dc20401e423a759930344b64614af0f53b987bbf680",
+      "bets": {},
+      "timestamp": 1767252335046
+    },
+    {
+      "id": "b9eb5be699aee8e7",
+      "crashMultiplier": 2.81,
+      "serverSeed": "9e87cf1f76a6fd65cb7d18505d9c6158",
+      "seedHash": "0f0c499fc0411e6951d15b5901fe8610895059be53c762b222a55e9fe3270a86",
+      "bets": {},
+      "timestamp": 1767251593137
+    },
+    {
+      "id": "62ef3ad91076be28",
+      "crashMultiplier": 16.54,
+      "serverSeed": "437c24110d4d0206d7be032b2f75fd53",
+      "seedHash": "b5af7a8577e71c831afac6087e9f75bd19970c14bef5f768a796ca0a981c2538",
+      "bets": {
+        "lmai9vjg7q": {
+          "amount": 999632,
+          "cashed": false,
+          "payout": 0
+        }
+      },
+      "timestamp": 1767251553816
+    },
+    {
+      "id": "0406281422a4f682",
+      "crashMultiplier": 7.33,
+      "serverSeed": "af7be905418155eeb73e8d8d46a0156d",
+      "seedHash": "20c9f10e3df651a858dde9e00626539caf77e12fc66540f20abfef8cefee8ac8",
+      "bets": {},
+      "timestamp": 1767251488286
+    },
+    {
+      "id": "066afa4ee9ea2ef4",
+      "crashMultiplier": 2.17,
+      "serverSeed": "4ed8838925fc401c3e471a8e3ee05836",
+      "seedHash": "5d3474e800a4060541fec9502d44ab0df3158c79e7aa8007306040970d91b98b",
+      "bets": {
+        "lmai9vjg7q": {
+          "amount": 5657675,
+          "cashed": false,
+          "payout": 0
+        }
+      },
+      "timestamp": 1767251434816
+    },
+    {
+      "id": "132e922ba42db29f",
+      "crashMultiplier": 1.59,
+      "serverSeed": "e696c73167029e1eec1f40776a91786f",
+      "seedHash": "48759f6a5168d83468e0d60f99301f7b5b24ca2f34c1922c9f94e859885cb806",
+      "bets": {},
+      "timestamp": 1767251399264
+    },
+    {
+      "id": "bf7cbacf64bdf74c",
+      "crashMultiplier": 12.35,
+      "serverSeed": "61bf1a747bb6a306400ac544d6dc8f60",
+      "seedHash": "80fb3909b8b147a85291c5f99016251ceb2fc65a07f57ac10f46880481cb16d0",
+      "bets": {},
+      "timestamp": 1767251368304
+    },
+    {
+      "id": "81e138b459f33584",
+      "crashMultiplier": 3.16,
+      "serverSeed": "7c769661f1510cd455ee40bd5826c252",
+      "seedHash": "1e3421c978d70412d449022496bae03dd5bc51d17ac77337e3fea7c03333b2e2",
+      "bets": {},
+      "timestamp": 1767250928491
+    },
+    {
+      "id": "8f5a960aa558df98",
+      "crashMultiplier": 2.38,
+      "serverSeed": "c5f1a0cb08e94fe025636364d60a7a1f",
+      "seedHash": "d0dddb2e07cfc0e00b3074628ecd8226e93873cb26783935b44499288831ef34",
+      "bets": {},
+      "timestamp": 1767250902408
+    },
+    {
+      "id": "af64f80d1f609107",
+      "crashMultiplier": 10.69,
+      "serverSeed": "66ae2d9d8dd72c36b409b1e53d0037fb",
+      "seedHash": "0390f91ff9e295dddf068810adbe11255be023d7ec6d36e4aff2dc0f64f890ee",
+      "bets": {},
+      "timestamp": 1767250880567
+    },
+    {
+      "id": "da801cd8ff6a1567",
+      "crashMultiplier": 1.28,
+      "serverSeed": "216ef5ab421b00b4ee52ddf307c402f6",
+      "seedHash": "63e4282954e5208b551042bb7c56e7e443064714f4c356f150ed150d2e692c69",
+      "bets": {},
+      "timestamp": 1767250836488
+    },
+    {
+      "id": "8d4f094737b64c7c",
+      "crashMultiplier": 1.05,
+      "serverSeed": "beccddd5eaa983cd9e994316295353b0",
+      "seedHash": "67b0db224491d62f39063de0a318596ad8b996d1314bf5b7908098b9b2e83109",
+      "bets": {},
+      "timestamp": 1767250823773
+    },
+    {
+      "id": "acc613487c635816",
+      "crashMultiplier": 1,
+      "serverSeed": "beb9dba21171c565d4f3a5b38f1156d5",
+      "seedHash": "3c4bb9ce733d0aa3a22d267978afc6047af3cde718c2594b136c56c9ad739e59",
+      "bets": {
+        "lmai9vjg7q": {
+          "amount": 100,
+          "cashed": false,
+          "payout": 0
+        }
+      },
+      "timestamp": 1767250813998
+    },
+    {
+      "id": "9849a1076f07bacb",
+      "crashMultiplier": 1.07,
+      "serverSeed": "5cd69da38bbc48a05841844043b21604",
+      "seedHash": "f748ae27abf0df677df2119aa1d934a8c6387686a507a350c8de3a5ce5928d03",
+      "bets": {},
+      "timestamp": 1767250804877
+    },
+    {
+      "id": "1b346b29a9a44a7e",
+      "crashMultiplier": 1.16,
+      "serverSeed": "6bc23ae4787630caedc07c5677f9cc00",
+      "seedHash": "b7be67e976813d5f9871dbb5616257c311bd8295a09769801ee7294f86c3ca9a",
+      "bets": {},
+      "timestamp": 1767250794770
+    },
+    {
+      "id": "1c3eb330329e4d7a",
+      "crashMultiplier": 1.32,
+      "serverSeed": "68eb454660856d1cdb45f8dd57109646",
+      "seedHash": "d976eb3972441b912de69d6ab83008ccb15954882b95658a65c75e8d72c0d68a",
+      "bets": {},
+      "timestamp": 1767250783536
+    },
+    {
+      "id": "a5aef5396b329772",
+      "crashMultiplier": 1,
+      "serverSeed": "07244a26df0efbd7b65b123e8b7142ed",
+      "seedHash": "4fc89e2cf24df031bca25ff78082bb2d93a19531182fa2b477b3ff3be284289a",
+      "bets": {},
+      "timestamp": 1767250770373
+    },
+    {
+      "id": "9ce38f97259b1051",
+      "crashMultiplier": 1.17,
+      "serverSeed": "e6abbaa0e2e5e2dc5bf904605f6d3fce",
+      "seedHash": "4548defbffbe26f9ae45c1acd252bc902485bb703fe6db03ebc400dbad57acb4",
+      "bets": {},
+      "timestamp": 1767250761264
+    },
+    {
+      "id": "27d81676d6f08807",
+      "crashMultiplier": 1.84,
+      "serverSeed": "5a08828ae25c6bf05c189012b15c1e36",
+      "seedHash": "ef47a43a756dcc2007a95d9ffa7d09cd13877dfa78b7483ae7e1a8a990bd220b",
+      "bets": {},
+      "timestamp": 1767250749924
+    },
+    {
+      "id": "2f24b1c4d32973fe",
+      "crashMultiplier": 1.45,
+      "serverSeed": "feba851ace0d6163e8b3954e54273ae6",
+      "seedHash": "d6a514a86d7db627518c95ad5c4ba1bcebece2acca7f6b602ed946c5e8d34dda",
+      "bets": {},
+      "timestamp": 1767250731864
+    },
+    {
+      "id": "902d864d2501c94f",
+      "crashMultiplier": 1.11,
+      "serverSeed": "c577b21ac5418e98aad045333c8089cc",
+      "seedHash": "cac0febade266944b648fdf17096db375093d8f05690f4733e208d9aabeef6aa",
+      "bets": {},
+      "timestamp": 1767250717066
+    },
+    {
+      "id": "b97bea2f64a218cf",
+      "crashMultiplier": 1.15,
+      "serverSeed": "4618a913bef939f36d300e7faa68246c",
+      "seedHash": "9cbde3288439b2afb2b9a2ee2ec6758fc7eff2b4856280925c4ebcaf67f3ea89",
+      "bets": {},
+      "timestamp": 1767250706482
+    },
+    {
+      "id": "b0e40f6f3ebaec2d",
+      "crashMultiplier": 2.83,
+      "serverSeed": "170110f0ebea9bb7900b226136b9a974",
+      "seedHash": "d168afa9acce2d5b55f43ab6eeef9f04ebee10f63c75bef2632bd503adadb6b0",
+      "bets": {},
+      "timestamp": 1767250695346
+    },
+    {
+      "id": "9cd82d3a67235e7d",
+      "crashMultiplier": 1.01,
+      "serverSeed": "3c0dd528ecd5c4f6b13e6ab529616a8f",
+      "seedHash": "5e6397cbc5a178c7754a264b9021b3ee560990c7d2b6c4379716ed99bb6ca2b3",
+      "bets": {},
+      "timestamp": 1767250670904
+    },
+    {
+      "id": "8c7912d83720959f",
+      "crashMultiplier": 3.77,
+      "serverSeed": "ef4fc4a2ffffc650d16b93e75e26b74d",
+      "seedHash": "8baafbb941597040e98f837c4fec1de233dbefc149170e9918a30713e6b2c6b1",
+      "bets": {},
+      "timestamp": 1767250661669
+    },
+    {
+      "id": "76da2084f5a2de84",
+      "crashMultiplier": 1.46,
+      "serverSeed": "4c06e43c78741fe41b76d37697e1cac9",
+      "seedHash": "b930b91fd2e635c68b240c46fe8f7171bbdc8f520fdd367c3379621d2ee10795",
+      "bets": {},
+      "timestamp": 1767250632976
+    },
+    {
+      "id": "7c34839b9da64176",
+      "crashMultiplier": 6.58,
+      "serverSeed": "6d3a0cb5275e722ef9f5c359d9321274",
+      "seedHash": "80ed02606b10f40bee23ff252c146468a33eba9b19d9ab0f8d9ff14c910099e1",
+      "bets": {},
+      "timestamp": 1767250618306
+    },
+    {
+      "id": "584966be8827011d",
+      "crashMultiplier": 3.53,
+      "serverSeed": "ebdb5e4a44e42df64eb109e5759721c4",
+      "seedHash": "4d9af748cf4c6eabdc4d7745347a40dd8e904196886239043cef200b22c3a2f7",
+      "bets": {},
+      "timestamp": 1767250581356
+    },
+    {
+      "id": "b56664650358eeb5",
+      "crashMultiplier": 4.63,
+      "serverSeed": "681d8fae4cd46a1ee688dcf0e59b3d26",
+      "seedHash": "3cc2164d08eb7a3a636dc58b8c7712daa168792af534b942d9f9de4a2447afab",
+      "bets": {},
+      "timestamp": 1767250553662
+    },
+    {
+      "id": "793e92257b6e1195",
+      "crashMultiplier": 9.78,
+      "serverSeed": "e624fc747511473a3803ecc990427948",
+      "seedHash": "d551f7d077cda0fbd8b3bd608483710e35f47b1b02b9aa20bbb80cf114ab4359",
+      "bets": {},
+      "timestamp": 1767250521933
+    },
+    {
+      "id": "95b8465868c1f364",
+      "crashMultiplier": 1.29,
+      "serverSeed": "b0863fe6581c64af07d3bace4e96d616",
+      "seedHash": "a8376d8fd10a0800b25fad3e5ccab5646a20a3fda7c7b34ab72f8b5ade51deed",
+      "bets": {},
+      "timestamp": 1767250479150
+    },
+    {
+      "id": "165705a15a1d6219",
+      "crashMultiplier": 1.15,
+      "serverSeed": "c16edd6f1d3a90481da3adfe678f4ee4",
+      "seedHash": "629a11e493ab1fbb8e9793f7e34921569f18f6c955cc9e815dde78af7c38672f",
+      "bets": {},
+      "timestamp": 1767250466358
+    },
+    {
+      "id": "e42034df9e11e607",
+      "crashMultiplier": 2.16,
+      "serverSeed": "e8bc39b04d37ff4f8e152e61879cc93d",
+      "seedHash": "cf43d444f84891ef8656a7a53ad1fcbce510d7ccbe12bdbd12df7102d96e5ff0",
+      "bets": {},
+      "timestamp": 1767250455188
+    },
+    {
+      "id": "2b3977e7b61d7727",
+      "crashMultiplier": 1.05,
+      "serverSeed": "ddc6a06cd17d294f6f246720bcb7991d",
+      "seedHash": "8596a21eb29f9e1571a5b40895356712a24b9b99cfbfcb01a0e6d8545c7a8c82",
+      "bets": {},
+      "timestamp": 1767250434679
+    },
+    {
+      "id": "e2a4f113e758b052",
+      "crashMultiplier": 1.87,
+      "serverSeed": "1cbf2ebda9327e3e63ca5779cae2f8b2",
+      "seedHash": "75b89b398fd2ed9bd46791a4fa992de87b6c1eb055356154f54ce0d249339f1f",
+      "bets": {},
+      "timestamp": 1767250424866
+    },
+    {
+      "id": "d88be54652654b0f",
+      "crashMultiplier": 3.16,
+      "serverSeed": "5365ee71703217b20f7f4c392856ed1f",
+      "seedHash": "5824f9466b7e43829f19d42f0c97ec180b5cfe2f6f6c89b23e59dd333801d96b",
+      "bets": {},
+      "timestamp": 1767250406401
+    },
+    {
+      "id": "ac69bb57394e9094",
+      "crashMultiplier": 161.2,
+      "serverSeed": "def235be03b7df42aeac01f5ba00aeea",
+      "seedHash": "6f509961219d4cb9fff253414d8a665586e33313bc042f93da34d34fbebd598f",
+      "bets": {},
+      "timestamp": 1767250380271
+    },
+    {
+      "id": "ac9aaf9788b157b1",
+      "crashMultiplier": 1.72,
+      "serverSeed": "76bad7c46cdfe10b4dd7e58a75c401dc",
+      "seedHash": "c555c4adece432697667c7260307445372fcab16bcb80a788fc5909f27d43d33",
+      "bets": {},
+      "timestamp": 1767250296063
+    },
+    {
+      "id": "a115212605a3a307",
+      "crashMultiplier": 1.94,
+      "serverSeed": "5609aae1848c5c0b0b32010d486be751",
+      "seedHash": "fc7419581e9669e61f9f27e4a395663b40df00ab2d73b3a5b40fa668ea09127b",
+      "bets": {},
+      "timestamp": 1767250279019
+    },
+    {
+      "id": "830f8231030a7f4d",
+      "crashMultiplier": 1.15,
+      "serverSeed": "14a294ef012df3be96ca16af302bc0ea",
+      "seedHash": "62d28c1ecae20b526e36d055fb2420d35c0195e9ed7756afb41c6b15999694d7",
+      "bets": {},
+      "timestamp": 1767250260168
+    },
+    {
+      "id": "f3554a4876f3f08c",
+      "crashMultiplier": 1.26,
+      "serverSeed": "bff4a4fd64b80f3f1c0c683f874b70ca",
+      "seedHash": "6fef5ba01e69e638e02a7c59e7bfaff9010e7ff4f5ee85b191ad2988b01a2c70",
+      "bets": {},
+      "timestamp": 1767250249017
+    },
+    {
+      "id": "e12e9ece50f1bfc2",
+      "crashMultiplier": 1.09,
+      "serverSeed": "3f231b256ec384f1ea18fe246f893daf",
+      "seedHash": "351523e816565b0eeb8cdba2b5dfec5e57694d756fb205ad19a935353ac23db8",
+      "bets": {},
+      "timestamp": 1767250236550
+    },
+    {
+      "id": "1a053330d8ba92f0",
+      "crashMultiplier": 1.05,
+      "serverSeed": "c6b57fa145cefe01b24d5787d1da3399",
+      "seedHash": "5ec74a5b9592154be66f0b7c6cd814a747bec6ce93f780a060061370fbdde21c",
+      "bets": {},
+      "timestamp": 1767250226190
+    },
+    {
+      "id": "9ed51d92024a136f",
+      "crashMultiplier": 1.96,
+      "serverSeed": "8741deabd134a410b8da3d20cf479741",
+      "seedHash": "1f68f684480ddea53fa4ebef7f1ca18cf4d0a836ec8698919f34f8675e45a6c4",
+      "bets": {
+        "lmai9vjg7q": {
+          "amount": 100,
+          "cashed": false,
+          "payout": 0
+        }
+      },
+      "timestamp": 1767250216406
+    },
+    {
+      "id": "174290fd83dfc2e4",
+      "crashMultiplier": 5.8,
+      "serverSeed": "224675279e20e2d89cf42e278e02879e",
+      "seedHash": "bca048b5cee97a3b674c76e5ad7b8919b0e137093eec83bf6a6332cf7b16aa5c",
+      "bets": {},
+      "timestamp": 1767250197343
+    },
+    {
+      "id": "c7f91c6f3c5ec3f1",
+      "crashMultiplier": 5.04,
+      "serverSeed": "d3bbe5f3d653357fc052dd10a9d0d68a",
+      "seedHash": "58746e1b6951677095257854eb088b21c0d6122e68e22f118abb3ed57fe5d2dc",
+      "bets": {},
+      "timestamp": 1767250162338
+    },
+    {
+      "id": "af1494a77d40afd9",
+      "crashMultiplier": 2.4,
+      "serverSeed": "a571a3cc3650a3579396dd02b615d8b5",
+      "seedHash": "4814746d48a2e4283a20420bf8c631caad7e32da45160e6d0a561caad7d5d136",
+      "bets": {},
+      "timestamp": 1767250129393
+    },
+    {
+      "id": "66bd8509d1c1470f",
+      "crashMultiplier": 2.28,
+      "serverSeed": "528c28a78d0a904098152212705ea9b3",
+      "seedHash": "3cb5dfe93ca37f8d2fcb886f83f05d7e584385a6bdbb332bd5fcbfbf8645552d",
+      "bets": {},
+      "timestamp": 1767250107375
+    },
+    {
+      "id": "59a4f2eebf5033db",
+      "crashMultiplier": 2.88,
+      "serverSeed": "7cb8e08538364cc85a6f296399384ce4",
+      "seedHash": "aa2033b3660bf1f37a419f3455a2c134feed729d9bf0749cfc138cce677a090b",
+      "bets": {},
+      "timestamp": 1767250086149
+    }
+  ]
+}

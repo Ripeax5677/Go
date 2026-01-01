@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Admin Panel — CoinFlip</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .adminPage{max-width:1000px;margin:36px auto;padding:20px}
+    .adminHeader{display:flex;justify-content:space-between;align-items:center}
+    .adminControls{display:flex;gap:8px;align-items:center}
+    table{width:100%;border-collapse:collapse;margin-top:12px}
+    th,td{padding:8px;border-bottom:1px solid rgba(255,255,255,0.04);text-align:left}
+    .smallBtn{padding:6px 8px;border-radius:6px;border:0;cursor:pointer}
+    .ban{background:#ef4444;color:white}
+    .unban{background:#10b981;color:white}
+    .muted{color:var(--muted)}
+  </style>
+</head>
+<body>
+  <main class="container adminPage">
+    <div class="adminHeader">
+      <h1>Admin Panel</h1>
+      <div>
+        <input id="adminUserName" placeholder="admin user" />
+        <input id="adminPassInput" type="password" placeholder="password" />
+        <button id="adminLoginBtn" class="smallBtn">Login</button>
+        <button id="adminLogoutBtn" class="smallBtn">Logout</button>
+      </div>
+    </div>
+
+    <section>
+      <h2>Users</h2>
+      <div class="muted">Manage users: set/add balance, ban/unban, view avatar and balance</div>
+      <table id="usersTable">
+        <thead><tr><th>ID</th><th>Discord</th><th>User</th><th>Balance</th><th>Banned</th><th>Actions</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Recent Flips</h2>
+      <div class="muted">Latest flips (outcome, user, time)</div>
+      <ul id="flipsList"></ul>
+    </section>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>
