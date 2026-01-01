@@ -5,5 +5,7 @@
   "minBet": 100000
   ,"discordClientId": "1456127161164628030",
   "discordClientSecret": "zFn2Z9PF20vmeg_uBNcYHEf4cnMq963S",
-  "discordRedirect": "https://uninnocuous-zana-filmy.ngrok-free.dev/auth/discord/callback"
+  "discordRedirect": "https://go-production-7482.up.railway.app/auth/discord/callback
+"
 }
+
