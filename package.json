@@ -2,7 +2,7 @@
   "name": "coinflip-site",
   "version": "1.0.0",
   "description": "Simple coin flip website with server-side logging and admin UI",
-  "main": "server.js",
+  "main": "run.js",
   "scripts": {
     "start": "node run.js"
   },
@@ -14,3 +14,5 @@
     "ws": "^8.18.3"
   }
 }
+
+
