@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CoinHouse Casino</title>
 
-    <!-- Modernized Casino CSS -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="/crash.css">
     <link rel="stylesheet" href="/slot.css">
+
     <style>
         :root {
             --bg: #0b0f1a;
@@ -21,20 +21,9 @@
             --radius: 16px;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Inter', sans-serif; background: radial-gradient(circle at top,#141a3a,var(--bg)); color: var(--text); }
-        .neonCard { background: linear-gradient(180deg,var(--card),var(--panel)); border-radius: var(--radius); padding: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.5); transition: transform 0.25s ease; }
-        .neonCard:hover { transform: translateY(-6px) scale(1.02); box-shadow: 0 20px 60px rgba(0,0,0,0.7); }
-        .primary { background: linear-gradient(135deg,var(--accent),#ffdd88); color:#1a1400; border:none; padding:12px 20px; border-radius:10px; font-weight:700; cursor:pointer; transition:transform 0.2s; }
-        .primary:hover { transform: scale(1.05); }
-        .secondary { background: transparent; color: var(--accent); border:1px solid var(--accent); padding:10px 18px; border-radius:10px; cursor:pointer; }
-        input { background: #0c1024; border:1px solid #232b66; color: var(--text); padding:10px 12px; border-radius:8px; }
-        .bottomNav { display: none; position: fixed; bottom: 0; left: 0; width: 100%; background: var(--panel); border-top: 1px solid #1e2550; padding: 8px 0; display: flex; justify-content: space-around; z-index: 100; }
-        .bottomNav button { background: none; border: none; color: var(--accent2); font-size: 18px; display: flex; flex-direction: column; align-items: center; gap: 2px; cursor: pointer; }
-        @media(max-width:768px) { .bottomNav { display:flex; } .topBar { display:none; } }
-        .popupBox { position: fixed; top: 20%; left:50%; transform: translateX(-50%); background: var(--accent); padding:24px 36px; border-radius:14px; font-weight:700; font-size:20px; color:#000; text-align:center; box-shadow:0 15px 60px rgba(0,0,0,0.6); animation: popupAnim 0.5s ease; z-index:1000; }
-        .popupBox.win { background: linear-gradient(135deg,#00ffb8,#00f0ff); color:#000; }
-        .popupBox.lose { background: linear-gradient(135deg,#ff3b3b,#f50000); color:#fff; }
-        @keyframes popupAnim { 0% {transform: translateY(-20px) scale(0.8); opacity:0;} 100% {transform: translateY(0) scale(1); opacity:1;} }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); }
+        .topBar, .bottomNav { z-index: 100; }
+        .popupBox { position: fixed; top: 20%; left:50%; transform: translateX(-50%); padding:24px 36px; border-radius:14px; font-weight:700; font-size:20px; text-align:center; display:none; }
     </style>
 </head>
 <body>
@@ -66,18 +55,16 @@
 </div>
 
 <main class="container">
-
     <section class="startPanel">
-        <div class="userSummary neonCard">
+        <div class="userSummary">
             <img id="smallAvatar" src="https://cdn.discordapp.com/embed/avatars/0.png?size=64" alt="avatar">
             <div class="userMeta">
                 <div id="userNameDisplay">Guest</div>
                 <div class="balance">Balance: <span id="userBalanceDisplay">0</span></div>
             </div>
         </div>
-
         <div class="modes">
-            <div class="modeCard neonCard">
+            <div class="modeCard">
                 <img src="/images/heads.svg" alt="CoinFlip Mode">
                 <div class="modeInfo">
                     <div class="modeTitle">Coin Flip</div>
@@ -85,7 +72,7 @@
                     <button id="playCoinFlip" class="primary">Play</button>
                 </div>
             </div>
-            <div class="modeCard neonCard">
+            <div class="modeCard">
                 <div class="modeIcon">⛏️</div>
                 <div class="modeInfo">
                     <div class="modeTitle">Mines</div>
@@ -93,7 +80,7 @@
                     <button id="playMines" class="primary">Play</button>
                 </div>
             </div>
-            <div class="modeCard neonCard">
+            <div class="modeCard">
                 <div class="modeIcon">🚀</div>
                 <div class="modeInfo">
                     <div class="modeTitle">Crash</div>
@@ -101,7 +88,7 @@
                     <button id="playCrash" class="primary">Play</button>
                 </div>
             </div>
-            <div class="modeCard neonCard">
+            <div class="modeCard">
                 <div class="modeIcon">🍩</div>
                 <div class="modeInfo">
                     <div class="modeTitle">Donut Slot</div>
@@ -112,10 +99,11 @@
         </div>
     </section>
 
-    <section class="gameArea hidden">...</section>
-    <section class="minesArea hidden">...</section>
-    <section class="crashArea hidden">...</section>
-    <section class="slotArea hidden">...</section>
+    <!-- Game Areas -->
+    <section class="gameArea hidden"></section>
+    <section class="minesArea hidden"></section>
+    <section class="crashArea hidden"></section>
+    <section class="slotArea hidden"></section>
 
     <div class="bottomNav">
         <button id="navCoinFlip">🎯<span>CoinFlip</span></button>
@@ -125,7 +113,6 @@
     </div>
 
     <div id="resultPopup" class="popupBox hidden"></div>
-
 </main>
 
 <script src="/crash_client_v2.js"></script>
