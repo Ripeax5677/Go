@@ -1,4 +1,4 @@
-/* style.css - Neon Casino Theme */
+/* style.css - Neon Casino Theme (FIXED & STABLE) */
 
 :root {
   --bg: #0b0f1a;
@@ -11,57 +11,295 @@
   --radius: 16px;
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: 'Inter', sans-serif; background: radial-gradient(circle at top,#141a3a,var(--bg)); color: var(--text); }
+/* ===== RESET ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-/* Top Navbar */
-.topBar { display: flex; justify-content: space-between; align-items: center; padding: 14px 24px; background: rgba(15,20,45,0.85); backdrop-filter: blur(10px); border-bottom: 1px solid #1e2550; position: sticky; top: 0; z-index: 100; }
-.logo { display: flex; align-items: center; gap: 10px; }
-.logoImg { height: 36px; }
-.logoText { font-size: 20px; font-weight: 700; color: var(--accent); }
-.rightBlock { display: flex; align-items: center; gap: 16px; }
-.siteBalance { font-weight: 600; color: var(--accent2); }
-.profileBtn { width: 40px; height: 40px; border-radius: 50%; cursor: pointer; border: 2px solid var(--accent); }
+body {
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(circle at top, #141a3a, var(--bg));
+  color: var(--text);
+  overflow-x: hidden; /* 🔒 prevents sideways layout bugs */
+}
 
-/* Profile Menu */
-.profileMenu { position: absolute; top: 70px; right: 24px; background: var(--panel); border-radius: var(--radius); padding: 12px; box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
-.logoutBtn { background: #d9534f; color: #fff; border: none; padding: 10px 16px; border-radius: 8px; cursor: pointer; font-weight: 600; }
+/* ===== TOP NAVBAR ===== */
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 24px;
+  background: rgba(15,20,45,0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #1e2550;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
 
-/* Container */
-main.container { max-width: 1200px; margin: 0 auto; padding: 32px 20px 80px; }
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
-/* User Summary */
-.userSummary { display: flex; align-items: center; gap: 16px; background: linear-gradient(135deg,var(--panel),var(--card)); padding: 20px; border-radius: var(--radius); box-shadow: 0 10px 40px rgba(0,0,0,0.4); }
-.userSummary img { width: 64px; height: 64px; border-radius: 50%; border: 2px solid var(--accent); }
-.userMeta .balance { color: var(--accent2); }
+.logoImg {
+  height: 36px;
+}
 
-/* Modes Grid */
-.modes { margin-top: 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: 24px; }
-.modeCard { background: linear-gradient(180deg,var(--card),var(--panel)); border-radius: var(--radius); padding: 24px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px; box-shadow: 0 20px 60px rgba(0,0,0,0.5); transition: transform 0.25s ease, box-shadow 0.25s ease; cursor: pointer; }
-.modeCard:hover { transform: translateY(-6px) scale(1.02); box-shadow: 0 30px 80px rgba(0,0,0,0.7); }
-.modeIcon { font-size: 48px; }
-.modeTitle { font-size: 20px; font-weight: 700; }
-.muted { color: var(--muted); font-size: 14px; }
-button.primary { background: linear-gradient(135deg,var(--accent),#ffdd88); color: #1a1400; border: none; padding: 12px 20px; border-radius: 10px; font-weight: 700; cursor: pointer; transition: transform 0.2s; }
-button.primary:hover { transform: scale(1.05); }
-button.secondary { background: transparent; color: var(--accent); border: 1px solid var(--accent); padding: 10px 18px; border-radius: 10px; cursor: pointer; }
-input { background: #0c1024; border: 1px solid #232b66; color: var(--text); padding: 10px 12px; border-radius: 8px; }
+.logoText {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--accent);
+}
 
-/* Game Areas */
-section.gameArea, section.minesArea, section.crashArea, section.slotArea { background: linear-gradient(180deg,var(--panel),var(--card)); border-radius: var(--radius); padding: 28px; margin-top: 32px; box-shadow: 0 20px 80px rgba(0,0,0,0.6); }
+.rightBlock {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
 
-/* Banned Overlay */
-.bannedOverlay { position: fixed; inset: 0; background: rgba(5,5,15,0.9); display: flex; align-items: center; justify-content: center; z-index: 999; }
-.bannedBox { background: var(--panel); padding: 40px; border-radius: var(--radius); text-align: center; box-shadow: 0 30px 80px rgba(0,0,0,0.8); }
+.siteBalance {
+  font-weight: 600;
+  color: var(--accent2);
+}
 
-/* Result Popup */
-.resultPopup { position: fixed; top: 20%; left: 50%; transform: translateX(-50%); z-index: 1000; }
-.popupBox { background: var(--accent); padding: 24px 36px; border-radius: 14px; font-weight: 700; font-size: 20px; color: #000; text-align: center; box-shadow: 0 15px 60px rgba(0,0,0,0.6); animation: popupAnim 0.5s ease; }
-.popupBox.win { background: linear-gradient(135deg,#00ffb8,#00f0ff); color: #000; }
-.popupBox.lose { background: linear-gradient(135deg,#ff3b3b,#f50000); color: #fff; }
-@keyframes popupAnim { 0% {transform: translateY(-20px) scale(0.8); opacity: 0;} 100% {transform: translateY(0) scale(1); opacity: 1;} }
+.profileBtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid var(--accent);
+}
 
-/* Bottom Nav Mobile */
-.bottomNav { display: none; position: fixed; bottom: 0; left: 0; width: 100%; background: var(--panel); border-top: 1px solid #1e2550; padding: 8px 0; display: flex; justify-content: space-around; z-index: 100; }
-.bottomNav button { background: none; border: none; color: var(--accent2); font-size: 18px; display: flex; flex-direction: column; align-items: center; gap: 2px; cursor: pointer; }
-@media(max-width:768px) { .bottomNav { display:flex; } .topBar { display:none; } }
+/* ===== PROFILE MENU ===== */
+.profileMenu {
+  position: absolute;
+  top: 70px;
+  right: 24px;
+  background: var(--panel);
+  border-radius: var(--radius);
+  padding: 12px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  z-index: 200;
+}
+
+.logoutBtn {
+  background: #d9534f;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* ===== MAIN CONTAINER ===== */
+main.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 20px 140px; /* 🔒 space for bottom nav */
+}
+
+/* ===== USER SUMMARY ===== */
+.userSummary {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: linear-gradient(135deg, var(--panel), var(--card));
+  padding: 20px;
+  border-radius: var(--radius);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+}
+
+.userSummary img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+}
+
+.userMeta .balance {
+  color: var(--accent2);
+}
+
+/* ===== MODES GRID ===== */
+.modes {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.modeCard {
+  background: linear-gradient(180deg, var(--card), var(--panel));
+  border-radius: var(--radius);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+}
+
+.modeCard:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.7);
+}
+
+.modeIcon {
+  font-size: 48px;
+}
+
+.modeTitle {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* ===== BUTTONS & INPUTS ===== */
+button.primary {
+  background: linear-gradient(135deg, var(--accent), #ffdd88);
+  color: #1a1400;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+button.primary:hover {
+  transform: scale(1.05);
+}
+
+button.secondary {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 10px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+input {
+  background: #0c1024;
+  border: 1px solid #232b66;
+  color: var(--text);
+  padding: 10px 12px;
+  border-radius: 8px;
+}
+
+/* ===== GAME AREAS ===== */
+section.gameArea,
+section.minesArea,
+section.crashArea,
+section.slotArea {
+  width: 100%;
+  max-width: 100%;
+  background: linear-gradient(180deg, var(--panel), var(--card));
+  border-radius: var(--radius);
+  padding: 28px;
+  margin-top: 32px;
+  box-shadow: 0 20px 80px rgba(0,0,0,0.6);
+}
+
+/* 🔒 only one panel visible */
+section.hidden {
+  display: none !important;
+}
+
+/* ===== BANNED OVERLAY ===== */
+.bannedOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(5,5,15,0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.bannedBox {
+  background: var(--panel);
+  padding: 40px;
+  border-radius: var(--radius);
+  text-align: center;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.8);
+}
+
+/* ===== RESULT POPUP ===== */
+.resultPopup {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+.popupBox {
+  background: var(--accent);
+  padding: 24px 36px;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: 20px;
+  color: #000;
+  text-align: center;
+  box-shadow: 0 15px 60px rgba(0,0,0,0.6);
+  animation: popupAnim 0.5s ease;
+}
+
+.popupBox.win {
+  background: linear-gradient(135deg, #00ffb8, #00f0ff);
+  color: #000;
+}
+
+.popupBox.lose {
+  background: linear-gradient(135deg, #ff3b3b, #f50000);
+  color: #fff;
+}
+
+@keyframes popupAnim {
+  0% { transform: translateY(-20px) scale(0.8); opacity: 0; }
+  100% { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+/* ===== BOTTOM NAV (MOBILE) ===== */
+.bottomNav {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: var(--panel);
+  border-top: 1px solid #1e2550;
+  padding: 8px 0;
+  justify-content: space-around;
+  z-index: 100;
+}
+
+.bottomNav button {
+  background: none;
+  border: none;
+  color: var(--accent2);
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .bottomNav { display: flex; }
+  .topBar { display: none; }
+}
