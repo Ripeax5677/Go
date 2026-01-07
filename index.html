@@ -1,125 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CoinHouse Casino</title>
-
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="/crash.css">
-    <link rel="stylesheet" href="/slot.css">
-
-    <style>
-        :root {
-            --bg: #0b0f1a;
-            --panel: #11162a;
-            --card: #151b36;
-            --accent: #f5c15b;
-            --accent2: #7cf6c7;
-            --text: #e6e9ff;
-            --muted: #9aa3d9;
-            --radius: 16px;
-        }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); }
-        .topBar, .bottomNav { z-index: 100; }
-        .popupBox { position: fixed; top: 20%; left:50%; transform: translateX(-50%); padding:24px 36px; border-radius:14px; font-weight:700; font-size:20px; text-align:center; display:none; }
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coin Flip</title>
+    <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="/crash.css" />
+        <link rel="stylesheet" href="/slot.css" />
 </head>
 <body>
-
-<div class="topBar">
-    <div class="logo">
-        <img class="logoImg" src="/images/logo.svg" alt="Logo">
-        <span class="logoText">CoinHouse</span>
-    </div>
-    <div class="rightBlock">
-        <div class="siteBalance">Balance: <span id="topBalance">0</span></div>
-        <div class="profileBlock">
-            <button id="profileLogoutVisible" class="logoutVisible hidden" title="Logout">⎋</button>
-            <img id="profileBtn" class="profileBtn" src="https://cdn.discordapp.com/embed/avatars/0.png?size=128" alt="Profile">
-        </div>
-    </div>
-</div>
-
-<div id="bannedOverlay" class="bannedOverlay hidden">
-    <div class="bannedBox">
-        <h2>YOU GOT BANNED FROM USING THIS SITE</h2>
-        <p class="muted">If you believe this is a mistake contact the admins.</p>
-        <button id="bannedLogout" class="logoutBtn">Logout</button>
-    </div>
-</div>
-
-<div id="profileMenu" class="profileMenu hidden">
-    <button id="userLogoutBtn" class="logoutBtn">Logout</button>
-</div>
-
-<main class="container">
-    <section class="startPanel">
-        <div class="userSummary">
-            <img id="smallAvatar" src="https://cdn.discordapp.com/embed/avatars/0.png?size=64" alt="avatar">
-            <div class="userMeta">
-                <div id="userNameDisplay">Guest</div>
-                <div class="balance">Balance: <span id="userBalanceDisplay">0</span></div>
+        <div class="topBar">
+            <div class="logo">
+                <img class="logoImg" src="/images/logo.svg" alt="Logo" />
+                <span class="logoText">CoinHouse</span>
             </div>
-        </div>
-        <div class="modes">
-            <div class="modeCard">
-                <img src="/images/heads.svg" alt="CoinFlip Mode">
-                <div class="modeInfo">
-                    <div class="modeTitle">Coin Flip</div>
-                    <p class="muted">Classic heads/tails. Quick bets, provably-fair.</p>
-                    <button id="playCoinFlip" class="primary">Play</button>
-                </div>
-            </div>
-            <div class="modeCard">
-                <div class="modeIcon">⛏️</div>
-                <div class="modeInfo">
-                    <div class="modeTitle">Mines</div>
-                    <p class="muted">5x5 grid. Avoid bombs, reveal diamonds, build multipliers.</p>
-                    <button id="playMines" class="primary">Play</button>
-                </div>
-            </div>
-            <div class="modeCard">
-                <div class="modeIcon">🚀</div>
-                <div class="modeInfo">
-                    <div class="modeTitle">Crash</div>
-                    <p class="muted">Bet, watch the multiplier rise and cash out before it crashes.</p>
-                    <button id="playCrash" class="primary">Play</button>
-                </div>
-            </div>
-            <div class="modeCard">
-                <div class="modeIcon">🍩</div>
-                <div class="modeInfo">
-                    <div class="modeTitle">Donut Slot</div>
-                    <p class="muted">Emoji Donut slot — 5x3 reels, 20 paylines, provably-like RNG demo.</p>
-                    <button id="playSlot" class="primary">Play</button>
+            <div class="rightBlock">
+                <div class="siteBalance">Balance: <span id="topBalance">0</span></div>
+                <div class="profileBlock">
+                    <button id="profileLogoutVisible" class="logoutVisible hidden" title="Logout">⎋</button>
+                    <img id="profileBtn" class="profileBtn" src="https://cdn.discordapp.com/embed/avatars/0.png?size=128" alt="Profile" />
                 </div>
             </div>
         </div>
-    </section>
+        <div id="bannedOverlay" class="bannedOverlay hidden">
+            <div class="bannedBox">
+                <h2>YOU GOT BANNED FROM USING THIS SITE</h2>
+                <p class="muted">If you believe this is a mistake contact the admins.</p>
+                <button id="bannedLogout" class="logoutBtn">Logout</button>
+            </div>
+        </div>
+        <div id="profileMenu" class="profileMenu hidden">
+                <button id="userLogoutBtn" class="logoutBtn">Logout</button>
+        </div>
+    <main class="container">
+        
+        <section class="startPanel">
+            <div class="userSummary">
+                <img id="smallAvatar" src="https://cdn.discordapp.com/embed/avatars/0.png?size=64" alt="avatar" />
+                <div class="userMeta">
+                    <div id="userNameDisplay">Guest</div>
+                    <div class="balance">Balance: <span id="userBalanceDisplay">0</span></div>
+                </div>
+            </div>
+            <div class="modes">
+                <div class="modeCard">
+                    <img src="/images/heads.svg" alt="CoinFlip Mode" />
+                    <div class="modeInfo">
+                        <div class="modeTitle">Coin Flip</div>
+                        <p class="muted">Classic heads/tails. Quick bets, provably-fair.</p>
+                        <button id="playCoinFlip" class="primary">Play</button>
+                    </div>
+                </div>
+                <div class="modeCard">
+                    <div class="modeIcon">⛏️</div>
+                    <div class="modeInfo">
+                        <div class="modeTitle">Mines</div>
+                        <p class="muted">5x5 grid. Avoid bombs, reveal diamonds, build multipliers.</p>
+                        <button id="playMines" class="primary">Play</button>
+                    </div>
+                </div>
+                <div class="modeCard">
+                    <div class="modeIcon">🚀</div>
+                    <div class="modeInfo">
+                        <div class="modeTitle">Crash</div>
+                        <p class="muted">Bet, watch the multiplier rise and cash out before it crashes.</p>
+                        <button id="playCrash" class="primary">Play</button>
+                    </div>
+                </div>
+                <div class="modeCard">
+                    <div class="modeIcon">🍩</div>
+                    <div class="modeInfo">
+                        <div class="modeTitle">Donut Slot</div>
+                        <p class="muted">Emoji Donut slot — 5x3 reels, 20 paylines, provably-like RNG demo.</p>
+                        <button id="playSlot" class="primary">Play</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="gameArea hidden">
+          <button id="backBtn" class="secondary">← Back</button>
+          <h1>Coin Flip — Heads or Tails</h1>
+          <div class="coin" id="coin">
+              <div class="coin-inner" id="coinInner">
+                  <div class="face front"><img src="/images/heads.svg" alt="Heads"/></div>
+                  <div class="face back"><img src="/images/tails.svg" alt="Tails"/></div>
+              </div>
+          </div>
+          <div class="controls">
+              <div class="choice">
+                  <button id="chooseHeads" class="choiceBtn selected">Heads</button>
+                  <button id="chooseTails" class="choiceBtn">Tails</button>
+              </div>
+              <input id="betAmount" placeholder="Bet amount" />
+              <div class="payout">Payout: <span id="payoutMul">1.9x</span> — Returns: <span id="payoutReturn">0</span></div>
+              <button id="flipBtn" class="primary">Place Bet & Flip</button>
+              <div id="userInfo" class="muted">Loading...</div>
+          </div>
+          <div id="result" class="result">
+            <button id="verifyCoinflipBtn" class="secondary hidden">🔍 Verify Fairness</button>
+          </div>
+        </section>
 
-    <!-- Game Areas -->
-    <section class="gameArea hidden"></section>
-    <section class="minesArea hidden"></section>
-    <section class="crashArea hidden"></section>
-    <section class="slotArea hidden"></section>
+        <!-- Mines Game Area -->
+        <section class="minesArea hidden">
+          <button id="backFromMines" class="secondary">← Back</button>
+          <h1>Mines</h1>
+          <div class="minesBetSetup hidden" id="minesBetSetup">
+            <div class="minesControl">
+              <label for="minesBet">Bet amount (min 100000):</label>
+              <input id="minesBet" type="number" min="100000" placeholder="100000" value="100000" />
+            </div>
+            <div class="minesControl">
+              <label for="minesBombs">Bombs (1-24):</label>
+              <input id="minesBombs" type="number" min="1" max="24" placeholder="3" value="3" />
+            </div>
+            <button id="startMinesBtn" class="primary">Start Game</button>
+          </div>
+          <div class="minesGame hidden" id="minesGame">
+            <div id="minesBoard" class="minesBoard"></div>
+            <div class="minesInfo">
+              <p>Safe revealed: <span id="minesSafeCount">0</span></p>
+              <p>Multiplier: <span id="minesMultiplier">1.00x</span></p>
+              <p>Payout: <span id="minesPayout">0</span></p>
+              <button id="verifyMinesBtn" class="secondary hidden">🔍 Verify Fairness</button>
+            </div>
+            <button id="minesCashoutBtn" class="primary">Cashout</button>
+          </div>
+        </section>
 
-    <div class="bottomNav">
-        <button id="navCoinFlip">🎯<span>CoinFlip</span></button>
-        <button id="navMines">⛏️<span>Mines</span></button>
-        <button id="navCrash">🚀<span>Crash</span></button>
-        <button id="navSlot">🍩<span>Slot</span></button>
-    </div>
+                <!-- Crash Game Area -->
+                <section class="crashArea hidden">
+                    <button id="backFromCrash" class="secondary">← Back</button>
+                    <h1>Crash</h1>
+                    <div class="crashContainer">
+                        <div class="topRow">Bank: <span id="crashBank">-</span> — Round: <span id="crashRound">-</span></div>
+                        <div class="multDisplay" id="crashMultiplier">1.00x</div>
+                        <div class="crashControls">
+                            <input id="crashBetAmount" placeholder="Bet amount" value="100" />
+                            <button id="crashPlaceBet" class="primary">Place Bet</button>
+                            <button id="crashCashout" class="secondary" disabled>Cash Out</button>
+                            <button id="crashVerify" class="secondary" disabled>Verify Fairness</button>
+                        </div>
+                        <div class="crashBetPresets">
+                            <span class="muted">Min: <span id="crashMinBet">-</span></span>
+                            <div class="presets">
+                                <button class="presetBtn" data-amt="1">1</button>
+                                <button class="presetBtn" data-amt="10">10</button>
+                                <button class="presetBtn" data-amt="100">100</button>
+                                <button class="presetBtn" data-amt="max">Max</button>
+                            </div>
+                        </div>
+                        <div class="crashInfo">Possible win: <span id="crashPossible">0</span></div>
+                        <div class="crashStatus">
+                            <div id="crashTimer">Betting time: <span id="crashCountdown">20</span>s</div>
+                            <div class="crashRunWrap"><div id="crashRunBar" class="crashRunBar"></div></div>
+                            <div class="crashProgressWrap"><div id="crashProgress" class="crashProgress"></div></div>
+                        </div>
+                        <div class="crashHistory">
+                            <h4>Last rounds</h4>
+                            <ul id="crashHistoryList"></ul>
+                        </div>
+                    </div>
+                </section>
+                </section>
 
-    <div id="resultPopup" class="popupBox hidden"></div>
-</main>
+                <!-- Slot Game Area -->
+                <section class="slotArea hidden">
+                    <button id="backFromSlot" class="secondary">← Back</button>
+                    <h1>Emoji Donut Slot</h1>
+                    <div class="slotContainer">
+                        <div class="slotTop">Progressive Jackpot: <span id="slotJackpot">0</span> — Min bet: 10000 — Max bet: 500000</div>
+                        <div id="slotGrid" class="slotGrid">
+                            <!-- 3 rows x 5 reels -->
+                        </div>
+                        <div class="slotControls">
+                            <input id="slotBet" type="number" placeholder="Bet amount" value="10000" />
+                            <button id="slotSpin" class="primary">Spin</button>
+                            <label><input id="slotAuto" type="checkbox" /> Autospin</label>
+                        </div>
+                        <div id="slotResult" class="slotResult"></div>
+                    </div>
+                </section>
 
-<script src="/crash_client_v2.js"></script>
-<script src="/slot_client.js"></script>
-<script src="app.js"></script>
-<script src="profile.js"></script>
-<script src="mines.js"></script>
+                <!-- proofPanel moved into gameArea so it's only visible during CoinFlip -->
+    
+        <!-- Crash verify modal -->
+        <div id="crashModal" class="crashModal hidden">
+            <div class="crashModalBox">
+                <button id="crashModalClose" class="modalClose">✕</button>
+                <h3>Fairness Proof</h3>
+                <div id="crashModalContent">Loading…</div>
+            </div>
+        </div>
 
+    </main>
+
+        <script src="/crash_client_v2.js"></script>
+    <script src="/slot_client.js"></script>
+    <script src="app.js"></script>
+    <script src="profile.js"></script>
+    <script src="mines.js"></script>
 </body>
 </html>
