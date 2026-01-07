@@ -1,203 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CoinHouse Casino</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoinHouse Casino</title>
 
-<!-- Styles -->
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="/crash.css">
-<link rel="stylesheet" href="/slot.css">
-
-<style>
-:root {
-  --bg: #0b0f1a;
-  --panel: #11162a;
-  --card: #151b36;
-  --accent: #f5c15b;
-  --accent2: #7cf6c7;
-  --text: #e6e9ff;
-  --muted: #9aa3d9;
-}
-
-* { box-sizing: border-box; }
-body { margin:0; font-family:Inter,sans-serif; background: radial-gradient(circle at top,#141a3a,var(--bg)); color:var(--text); }
-.hidden { display:none !important; }
-
-/* Top Navbar */
-.topBar { display:flex; justify-content:space-between; align-items:center; padding:14px 24px; background: rgba(15,20,45,.85); backdrop-filter:blur(10px); border-bottom:1px solid #1e2550; position:sticky; top:0; z-index:100; }
-.logo { display:flex; align-items:center; gap:10px; }
-.logoImg { height:36px; }
-.logoText { font-size:20px; font-weight:700; }
-.rightBlock { display:flex; align-items:center; gap:16px; }
-.siteBalance { font-weight:600; color:var(--accent2); }
-.profileBtn { width:40px;height:40px;border-radius:50%;cursor:pointer;border:2px solid var(--accent); }
-
-/* Profile Menu */
-.profileMenu { position:absolute; top:70px; right:24px; background:var(--panel); border-radius:12px; padding:12px; box-shadow:0 20px 60px rgba(0,0,0,.5); }
-.logoutBtn { background:#d9534f; color:#fff; border:none; padding:10px 16px; border-radius:8px; cursor:pointer; font-weight:600; }
-
-/* Container */
-main.container { max-width:1200px; margin:0 auto; padding:32px 20px 80px; }
-
-/* User Summary */
-.userSummary { display:flex; align-items:center; gap:16px; background:linear-gradient(135deg,var(--panel),var(--card)); padding:20px; border-radius:16px; box-shadow:0 10px 40px rgba(0,0,0,.4); }
-.userSummary img { width:64px; height:64px; border-radius:50%; border:2px solid var(--accent); }
-.userMeta .balance { color:var(--accent2); }
-
-/* Modes Grid */
-.modes { margin-top:32px; display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:24px; }
-.modeCard { background:linear-gradient(180deg,var(--card),var(--panel)); border-radius:18px; padding:24px; display:flex; flex-direction:column; align-items:center; text-align:center; gap:14px; box-shadow:0 20px 60px rgba(0,0,0,.5); transition: transform .25s ease, box-shadow .25s ease; }
-.modeCard:hover { transform:translateY(-6px) scale(1.02); box-shadow:0 30px 80px rgba(0,0,0,.7); }
-.modeIcon { font-size:48px; }
-.modeTitle { font-size:20px; font-weight:700; }
-.muted { color:var(--muted); font-size:14px; }
-button.primary { background:linear-gradient(135deg,var(--accent),#ffdd88); color:#1a1400; border:none; padding:12px 20px; border-radius:10px; font-weight:700; cursor:pointer; }
-button.secondary { background:transparent; color:var(--accent); border:1px solid var(--accent); padding:10px 18px; border-radius:10px; cursor:pointer; }
-input { background:#0c1024; border:1px solid #232b66; color:var(--text); padding:10px 12px; border-radius:8px; }
-
-/* Game Areas */
-section.gameArea, section.minesArea, section.crashArea, section.slotArea { background:linear-gradient(180deg,var(--panel),var(--card)); border-radius:20px; padding:28px; margin-top:32px; box-shadow:0 20px 80px rgba(0,0,0,.6); }
-
-/* Banned Overlay */
-.bannedOverlay { position:fixed; inset:0; background:rgba(5,5,15,.9); display:flex; align-items:center; justify-content:center; z-index:999; }
-.bannedBox { background:var(--panel); padding:40px; border-radius:18px; text-align:center; box-shadow:0 30px 80px rgba(0,0,0,.8); }
-
-/* Result Popup */
-.resultPopup { position:fixed; top:20%; left:50%; transform:translateX(-50%); z-index:1000; }
-.popupBox { background:var(--accent); padding:24px 36px; border-radius:14px; font-weight:700; font-size:20px; color:#000; text-align:center; box-shadow:0 15px 60px rgba(0,0,0,.6); animation:popupAnim 0.5s ease; }
-.popupBox.win { background:linear-gradient(135deg,#00ffb8,#00f0ff); color:#000; }
-.popupBox.lose { background:linear-gradient(135deg,#ff3b3b,#f50000); color:#fff; }
-@keyframes popupAnim { 0% {transform:translateY(-20px) scale(0.8); opacity:0;} 100% {transform:translateY(0) scale(1); opacity:1;} }
-
-/* Bottom Nav for Mobile */
-.bottomNav { display:none; position:fixed; bottom:0; left:0; width:100%; background:var(--panel); border-top:1px solid #1e2550; padding:8px 0; display:flex; justify-content:space-around; z-index:100; }
-.bottomNav button { background:none; border:none; color:var(--accent2); font-size:18px; display:flex; flex-direction:column; align-items:center; gap:2px; cursor:pointer; }
-@media(max-width:768px) { .bottomNav { display:flex; } .topBar { display:none; } }
-</style>
+    <!-- Modernized Casino CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/crash.css">
+    <link rel="stylesheet" href="/slot.css">
+    <style>
+        :root {
+            --bg: #0b0f1a;
+            --panel: #11162a;
+            --card: #151b36;
+            --accent: #f5c15b;
+            --accent2: #7cf6c7;
+            --text: #e6e9ff;
+            --muted: #9aa3d9;
+            --radius: 16px;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; background: radial-gradient(circle at top,#141a3a,var(--bg)); color: var(--text); }
+        .neonCard { background: linear-gradient(180deg,var(--card),var(--panel)); border-radius: var(--radius); padding: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.5); transition: transform 0.25s ease; }
+        .neonCard:hover { transform: translateY(-6px) scale(1.02); box-shadow: 0 20px 60px rgba(0,0,0,0.7); }
+        .primary { background: linear-gradient(135deg,var(--accent),#ffdd88); color:#1a1400; border:none; padding:12px 20px; border-radius:10px; font-weight:700; cursor:pointer; transition:transform 0.2s; }
+        .primary:hover { transform: scale(1.05); }
+        .secondary { background: transparent; color: var(--accent); border:1px solid var(--accent); padding:10px 18px; border-radius:10px; cursor:pointer; }
+        input { background: #0c1024; border:1px solid #232b66; color: var(--text); padding:10px 12px; border-radius:8px; }
+        .bottomNav { display: none; position: fixed; bottom: 0; left: 0; width: 100%; background: var(--panel); border-top: 1px solid #1e2550; padding: 8px 0; display: flex; justify-content: space-around; z-index: 100; }
+        .bottomNav button { background: none; border: none; color: var(--accent2); font-size: 18px; display: flex; flex-direction: column; align-items: center; gap: 2px; cursor: pointer; }
+        @media(max-width:768px) { .bottomNav { display:flex; } .topBar { display:none; } }
+        .popupBox { position: fixed; top: 20%; left:50%; transform: translateX(-50%); background: var(--accent); padding:24px 36px; border-radius:14px; font-weight:700; font-size:20px; color:#000; text-align:center; box-shadow:0 15px 60px rgba(0,0,0,0.6); animation: popupAnim 0.5s ease; z-index:1000; }
+        .popupBox.win { background: linear-gradient(135deg,#00ffb8,#00f0ff); color:#000; }
+        .popupBox.lose { background: linear-gradient(135deg,#ff3b3b,#f50000); color:#fff; }
+        @keyframes popupAnim { 0% {transform: translateY(-20px) scale(0.8); opacity:0;} 100% {transform: translateY(0) scale(1); opacity:1;} }
+    </style>
 </head>
 <body>
 
-<!-- Top Navbar -->
 <div class="topBar">
-  <div class="logo"><img class="logoImg" src="/images/logo.svg" /><span class="logoText">CoinHouse</span></div>
-  <div class="rightBlock">
-    <div class="siteBalance">Balance: <span id="topBalance">0</span></div>
-    <div class="profileBlock">
-      <button id="profileLogoutVisible" class="logoutVisible hidden">⎋</button>
-      <img id="profileBtn" class="profileBtn" src="https://cdn.discordapp.com/embed/avatars/0.png?size=128" />
+    <div class="logo">
+        <img class="logoImg" src="/images/logo.svg" alt="Logo">
+        <span class="logoText">CoinHouse</span>
     </div>
-  </div>
+    <div class="rightBlock">
+        <div class="siteBalance">Balance: <span id="topBalance">0</span></div>
+        <div class="profileBlock">
+            <button id="profileLogoutVisible" class="logoutVisible hidden" title="Logout">⎋</button>
+            <img id="profileBtn" class="profileBtn" src="https://cdn.discordapp.com/embed/avatars/0.png?size=128" alt="Profile">
+        </div>
+    </div>
 </div>
 
-<!-- Banned Overlay -->
 <div id="bannedOverlay" class="bannedOverlay hidden">
-  <div class="bannedBox">
-    <h2>YOU ARE BANNED</h2>
-    <p class="muted">Contact admins if this is a mistake.</p>
-    <button id="bannedLogout" class="logoutBtn">Logout</button>
-  </div>
+    <div class="bannedBox">
+        <h2>YOU GOT BANNED FROM USING THIS SITE</h2>
+        <p class="muted">If you believe this is a mistake contact the admins.</p>
+        <button id="bannedLogout" class="logoutBtn">Logout</button>
+    </div>
 </div>
 
-<!-- Profile Menu -->
 <div id="profileMenu" class="profileMenu hidden">
-  <button id="userLogoutBtn" class="logoutBtn">Logout</button>
+    <button id="userLogoutBtn" class="logoutBtn">Logout</button>
 </div>
 
-<!-- Main Container -->
 <main class="container">
-  <section class="startPanel">
-    <div class="userSummary">
-      <img id="smallAvatar" src="https://cdn.discordapp.com/embed/avatars/0.png?size=64" />
-      <div class="userMeta">
-        <div id="userNameDisplay">Guest</div>
-        <div class="balance">Balance: <span id="userBalanceDisplay">0</span></div>
-      </div>
+
+    <section class="startPanel">
+        <div class="userSummary neonCard">
+            <img id="smallAvatar" src="https://cdn.discordapp.com/embed/avatars/0.png?size=64" alt="avatar">
+            <div class="userMeta">
+                <div id="userNameDisplay">Guest</div>
+                <div class="balance">Balance: <span id="userBalanceDisplay">0</span></div>
+            </div>
+        </div>
+
+        <div class="modes">
+            <div class="modeCard neonCard">
+                <img src="/images/heads.svg" alt="CoinFlip Mode">
+                <div class="modeInfo">
+                    <div class="modeTitle">Coin Flip</div>
+                    <p class="muted">Classic heads/tails. Quick bets, provably-fair.</p>
+                    <button id="playCoinFlip" class="primary">Play</button>
+                </div>
+            </div>
+            <div class="modeCard neonCard">
+                <div class="modeIcon">⛏️</div>
+                <div class="modeInfo">
+                    <div class="modeTitle">Mines</div>
+                    <p class="muted">5x5 grid. Avoid bombs, reveal diamonds, build multipliers.</p>
+                    <button id="playMines" class="primary">Play</button>
+                </div>
+            </div>
+            <div class="modeCard neonCard">
+                <div class="modeIcon">🚀</div>
+                <div class="modeInfo">
+                    <div class="modeTitle">Crash</div>
+                    <p class="muted">Bet, watch the multiplier rise and cash out before it crashes.</p>
+                    <button id="playCrash" class="primary">Play</button>
+                </div>
+            </div>
+            <div class="modeCard neonCard">
+                <div class="modeIcon">🍩</div>
+                <div class="modeInfo">
+                    <div class="modeTitle">Donut Slot</div>
+                    <p class="muted">Emoji Donut slot — 5x3 reels, 20 paylines, provably-like RNG demo.</p>
+                    <button id="playSlot" class="primary">Play</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gameArea hidden">...</section>
+    <section class="minesArea hidden">...</section>
+    <section class="crashArea hidden">...</section>
+    <section class="slotArea hidden">...</section>
+
+    <div class="bottomNav">
+        <button id="navCoinFlip">🎯<span>CoinFlip</span></button>
+        <button id="navMines">⛏️<span>Mines</span></button>
+        <button id="navCrash">🚀<span>Crash</span></button>
+        <button id="navSlot">🍩<span>Slot</span></button>
     </div>
 
-    <!-- Game Modes -->
-    <div class="modes">
-      <div class="modeCard">
-        <img src="/images/heads.svg" width="64">
-        <div class="modeTitle">Coin Flip</div>
-        <p class="muted">Classic 50/50 provably fair.</p>
-        <button id="playCoinFlip" class="primary">Play</button>
-      </div>
-      <div class="modeCard">
-        <div class="modeIcon">⛏️</div>
-        <div class="modeTitle">Mines</div>
-        <p class="muted">Reveal tiles, avoid bombs.</p>
-        <button id="playMines" class="primary">Play</button>
-      </div>
-      <div class="modeCard">
-        <div class="modeIcon">🚀</div>
-        <div class="modeTitle">Crash</div>
-        <p class="muted">Cash out before it crashes.</p>
-        <button id="playCrash" class="primary">Play</button>
-      </div>
-      <div class="modeCard">
-        <div class="modeIcon">🍩</div>
-        <div class="modeTitle">Donut Slot</div>
-        <p class="muted">Emoji reels & jackpots.</p>
-        <button id="playSlot" class="primary">Play</button>
-      </div>
-    </div>
-  </section>
+    <div id="resultPopup" class="popupBox hidden"></div>
+
 </main>
 
-<!-- Bottom Nav Mobile -->
-<div class="bottomNav">
-  <button onclick="document.getElementById('playCoinFlip').scrollIntoView()">🎲 CoinFlip</button>
-  <button onclick="document.getElementById('playMines').scrollIntoView()">⛏️ Mines</button>
-  <button onclick="document.getElementById('playCrash').scrollIntoView()">🚀 Crash</button>
-  <button onclick="document.getElementById('playSlot').scrollIntoView()">🍩 Slot</button>
-</div>
-
-<!-- Win/Lose Popup -->
-<div id="resultPopup" class="resultPopup hidden">
-  <div class="popupBox" id="popupBox">
-    <div id="popupTitle"></div>
-    <div id="popupAmount"></div>
-  </div>
-</div>
-
-<!-- Scripts -->
 <script src="/crash_client_v2.js"></script>
 <script src="/slot_client.js"></script>
 <script src="app.js"></script>
 <script src="profile.js"></script>
 <script src="mines.js"></script>
-
-<script>
-// Balance Count-Up
-function animateBalance(el,start,end,duration=600){
-  const range=end-start; let startTime=null;
-  function step(ts){
-    if(!startTime) startTime=ts;
-    const progress=Math.min((ts-startTime)/duration,1);
-    el.textContent=Math.floor(start+range*progress);
-    if(progress<1) requestAnimationFrame(step);
-  }
-  requestAnimationFrame(step);
-}
-window.updateBalanceAnimated=function(newBal){
-  const el=document.getElementById('topBalance');
-  const old=Number(el.textContent)||0;
-  animateBalance(el,old,newBal);
-};
-
-// Win/Lose Popup
-window.showResultPopup=function(win,amount){
-  const popup=document.getElementById('resultPopup');
-  const box=document.getElementById('popupBox');
-  document.getElementById('popupTitle').textContent=win?'YOU WON 🎉':'YOU LOST';
-  document.getElementById('popupAmount').textContent=(win?'+':'-')+amount;
-  box.className='popupBox '+(win?'win':'lose');
-  popup.classList.remove('hidden');
-  setTimeout(()=>popup.classList.add('hidden'),2200);
-};
-</script>
 
 </body>
 </html>
